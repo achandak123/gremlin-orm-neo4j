@@ -1,7 +1,7 @@
 version: "2"
 services:
   gremlin-console:
-    image: gremlinorm/gremlin-console-neo4j
+    image: amitchandak/gremlin-console-neo4j-3.3.1:v1
     volumes:
       - ./data/:/data/
       - ./gremlin-console-neo4j/conf/remote-docker-compose.yml:/gremlin-console/conf/remote-docker-compose.yml
@@ -13,7 +13,7 @@ services:
       - gremlin-server
 
   gremlin-server:
-    image: gremlinorm/gremlin-server-neo4j
+    image: amitchandak/gremlin-server-neo4j-3.3.1:v1
     container_name: gremlin-server
     ports:
       - "8182:8182"
